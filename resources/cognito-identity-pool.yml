@@ -13,7 +13,9 @@ Resources:
             Ref: CognitoUserPoolClient
           ProviderName:
             Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
-            
+      SupportedLoginProviders:
+          graph.facebook.com: ${self:custom.facebook_app_id}
+          accounts.google.com: ${self:custom.google_app_id}
   # IAM roles
   CognitoIdentityPoolRoles:
     Type: AWS::Cognito::IdentityPoolRoleAttachment

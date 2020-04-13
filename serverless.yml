@@ -16,6 +16,8 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   # Set the table name here so we can use it while testing locally
   tableName: ${self:custom.stage}-notes
+  facebook_app_id: 529332871342680
+  google_app_id: google_app_id
 
 provider:
   name: aws
